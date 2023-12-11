@@ -11,7 +11,10 @@ jobs:
         with:
           enablement: true
           token: ${{ secrets.CONFIGURE_PAGES_PAT }}
+      - run: echo '<h1>Hellllo GHA!!<h1>' > index.html
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v2.0.0
+        with:
+          path: .
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v3.0.1
