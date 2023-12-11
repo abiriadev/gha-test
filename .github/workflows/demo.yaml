@@ -29,5 +29,5 @@ jobs:
     environment:
       name: yeeeeeeenvironment
       url: https://google.com
-      steps:
-        run: echo A
+    steps:
+      run: echo A
