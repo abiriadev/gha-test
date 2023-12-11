@@ -3,8 +3,22 @@ run-name: '${{ github.actor }} is testing out GitHub Actions :rocket:'
 on:
   - push
 jobs:
-  job1:
-  job2:
-    needs: job1
-  job3:
-    needs: [job1, job2]
+  a1:
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "yo"
+  b1:
+    needs: a1
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "yo"
+  b2:
+    needs: a1
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "yo"
+  c1:
+    needs: [b1, b2]
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "yo"
