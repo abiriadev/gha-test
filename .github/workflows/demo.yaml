@@ -15,3 +15,9 @@ jobs:
       - run: echo Hello, $HEY
         env:
           HEY: Abiria
+      - run: echo Halo, $HEY
+        env:
+          HEY: kokok
+      - run: echo こんにちは, $HEY
+        env:
+          HEY: kokok
