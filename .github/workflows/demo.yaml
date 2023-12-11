@@ -3,7 +3,8 @@ run-name: '${{ github.actor }} is testing out GitHub Actions :rocket:'
 on:
   - push
 jobs:
-  YoooThisIsMyNewJob:
+  new-job:
+    name: Yooo This Is My New Job
     runs-on: ubuntu-latest
     steps:
       - run: echo "hey GH, ${{ github }}"
@@ -16,12 +17,14 @@ jobs:
       - name: Show pwd of ws
         run: echo ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
-  twoJobs:
+  two-jobs:
+    name: Two jobs
     runs-on: ubuntu-latest
     steps:
       - run: echo yo
   two-times:
-    name: "Two Times (clap!)"
+    name: 'Two Times (clap!)'
+    needs: ['two-jobs', 'new-job']
     runs-on: ubuntu-latest
     steps:
       - run: echo yoooo
