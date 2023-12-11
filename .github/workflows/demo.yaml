@@ -27,7 +27,7 @@ jobs:
         id: deployment
   env2:
     environment:
-      name: yeeeeeeenvironment!!
+      name: yeeeeeeenvironment
       url: https://google.com
       steps:
         run: echo A
