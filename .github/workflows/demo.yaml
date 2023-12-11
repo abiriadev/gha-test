@@ -23,27 +23,26 @@ jobs:
     steps:
       - run: echo "yo"
   c2:
-    needs: [b1, b2]
+    needs: b1
     runs-on: ubuntu-latest
     steps:
       - run: echo "yo"
   c3:
-    needs: [b1, b2]
     runs-on: ubuntu-latest
     steps:
       - run: echo "yo"
   d1:
-    needs: [c1, c2, c3]
+    needs: [b2, c3]
     runs-on: ubuntu-latest
     steps:
       - run: echo "yo"
   d2:
-    needs: [c1, c2, c3, b2]
+    needs: b2
     runs-on: ubuntu-latest
     steps:
       - run: echo "yo"
   e1:
-    needs: [d1, d2]
+    needs: [d1, d2, c1]
     runs-on: ubuntu-latest
     steps:
       - run: echo "yo"
