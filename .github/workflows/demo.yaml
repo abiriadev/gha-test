@@ -13,5 +13,6 @@ jobs:
       - name: Show pwd www
         run: |
           pwd
-          ls ${{ github.workspace }}
+      - name: Show pwd of ws
+        run: echo ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
