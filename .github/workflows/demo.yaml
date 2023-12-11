@@ -4,6 +4,9 @@ on:
   - push
 jobs:
   deploy-my-pages:
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Configure GitHub Pages
@@ -18,6 +21,3 @@ jobs:
           path: .
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v3.0.1
-        permissions:
-          pages: write
-          id-token: write
