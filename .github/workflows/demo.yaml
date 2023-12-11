@@ -25,3 +25,7 @@ jobs:
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v3.0.1
         id: deployment
+  env2:
+    environment:
+      name: yeeeeeeenvironment!!
+      url: https://google.com
