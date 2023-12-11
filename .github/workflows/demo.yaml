@@ -6,19 +6,19 @@ jobs:
   a1:
     runs-on: ubuntu-latest
     steps:
-      run: echo "yo"
+      - run: echo "yo"
   b1:
     needs: a1
     runs-on: ubuntu-latest
     steps:
-      run: echo "yo"
+      - run: echo "yo"
   b2:
     needs: a1
     runs-on: ubuntu-latest
     steps:
-      run: echo "yo"
+      - run: echo "yo"
   c1:
     needs: [b1, b2]
     runs-on: ubuntu-latest
     steps:
-      run: echo "yo"
+      - run: echo "yo"
