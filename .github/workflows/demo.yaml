@@ -2,6 +2,8 @@ name: GitHub Action DemoEEEEE
 run-name: '${{ github.actor }} is testing out GitHub Actions :rocket:'
 on:
   - push
+env:
+  HEY: Abiria
 jobs:
   deploy-my-pages:
     runs-on: ubuntu-latest
@@ -13,8 +15,6 @@ jobs:
       # - name: Deploy GitHub Pages site
       #   uses: actions/deploy-pages@v3.0.1
       - run: echo Hello, $HEY
-        env:
-          HEY: Abiria
       - run: echo Halo, $HEY
         env:
           HEY: kokok
