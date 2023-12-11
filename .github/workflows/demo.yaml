@@ -17,6 +17,8 @@ jobs:
         run: echo ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
   twoJobs:
-    steps: []
+    steps:
+      - run: echo yo
   twoTimes(Clap):
-    steps: []
+    steps:
+      - run: echo yoooo
