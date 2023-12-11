@@ -12,6 +12,6 @@ jobs:
       #   uses: actions/upload-pages-artifact@v2.0.0
       # - name: Deploy GitHub Pages site
       #   uses: actions/deploy-pages@v3.0.1
-      - run: echo Hello, $HEYY
+      - run: echo Hello, $HEY
         env:
           HEY: Abiria
