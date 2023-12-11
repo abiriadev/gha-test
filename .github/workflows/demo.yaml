@@ -16,3 +16,5 @@ jobs:
       - name: Show pwd of ws
         run: echo ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
+  twoJobs:
+  twoTimes(Clap):
