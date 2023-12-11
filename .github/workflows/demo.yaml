@@ -19,5 +19,3 @@ jobs:
         env:
           HEY: kokok
       - run: echo こんにちは, $HEY
-        env:
-          HEY: kokok
