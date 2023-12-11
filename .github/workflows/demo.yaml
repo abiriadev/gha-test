@@ -20,7 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo yo
-  twoTimesClap:
+  two-times:
+    name: "Two Times (clap!)"
     runs-on: ubuntu-latest
     steps:
       - run: echo yoooo
