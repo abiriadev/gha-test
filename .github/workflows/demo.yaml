@@ -29,5 +29,6 @@ jobs:
     environment:
       name: yeeeeeeenvironment
       url: https://google.com
+    runs-on: ubuntu-latest
     steps:
       - run: echo A
