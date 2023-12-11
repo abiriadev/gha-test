@@ -3,46 +3,11 @@ run-name: '${{ github.actor }} is testing out GitHub Actions :rocket:'
 on:
   - push
 jobs:
-  a1:
-    runs-on: ubuntu-latest
+  deploy-my-pages:
     steps:
-      - run: echo "yo"
-  b1:
-    needs: a1
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
-  b2:
-    needs: a1
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
-  c1:
-    needs: [b1, b2]
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
-  c2:
-    needs: b1
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
-  c3:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
-  d1:
-    needs: [b2, c3]
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
-  d2:
-    needs: b2
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
-  e1:
-    needs: [d1, d2, c1]
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "yo"
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v4.0.0
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v2.0.0
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v3.0.1
