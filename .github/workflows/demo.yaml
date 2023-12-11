@@ -30,4 +30,4 @@ jobs:
       name: yeeeeeeenvironment
       url: https://google.com
     steps:
-      run: echo A
+      - run: echo A
