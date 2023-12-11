@@ -14,21 +14,4 @@ jobs:
       #   uses: actions/upload-pages-artifact@v2.0.0
       # - name: Deploy GitHub Pages site
       #   uses: actions/deploy-pages@v3.0.1
-      - shell: bash
-        run: |
-          expr 1 + 1 > output.log
-      - name: Upload output artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: output-log-file
-          path: output.log
-  yong:
-    needs: deploy-my-pages
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download a single artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: output-log-file
-      - run: ls
-      - run: cat ./output.log
+      - run: echo ${{ secrets.GITHUB_TOKEN }}
